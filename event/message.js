@@ -1,8 +1,8 @@
 module.exports = (client,message) => {
     let guildDb = client.guilddb.get(message.guild.id);
         prefix = guildDb.prefix;
-    if(message.author.bot){return}
-    if(!message.content.startsWith(prefix)){return}
+    if(message.author.bot) return;
+    if(!message.content.startsWith(prefix)) return;
 
         let user = client.rpg.get(message.author.id);
 if(!user){
